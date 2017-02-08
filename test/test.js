@@ -21,6 +21,10 @@ describe("pow", function() {
 	  	it("при возведении в дробную степень результат NaN", function() {
 	    	assert(isNaN(pow(2, 1.5)), "pow(2, 1.5) не NaN");
 	  	});
+
+	  	it("если x строка результат NaN", function() {
+	  		assert(isNaN(pow("string", 2)), "pow('string', 2)) не NaN" )
+	  	});
 	 });
 
 	describe("любое число, кроме нуля, в степени 0 равно 1", function() {
