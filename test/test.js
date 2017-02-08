@@ -44,4 +44,18 @@ describe("pow", function() {
 	it("ноль в нулевой степени даёт NaN", function() {
 	    assert(isNaN(pow(0, 0)), "0 в степени 0 не NaN");
 	});
+
+	describe("ноль в любой степени , кроме нуля, равно 0", function() {
+
+	    function makeTest(x) {
+	      it("при возведении 0 в стерень " + x + " результат: 0", function() {
+	        assert.equal(pow(0, х), 0);
+	      });
+	    }
+
+	    for (var i = 1; i < 5; i++) {
+	      makeTest(i);
+	    }
+
+	 });
 });
