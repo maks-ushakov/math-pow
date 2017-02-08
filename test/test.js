@@ -1,5 +1,5 @@
 describe("pow", function() {
-	describe("Возводит х в степень 3", function() {
+	describe("Возводит х в степень n", function() {
 		function makeTest(x) {
 			var expected = x * x * x;
 			it("При возведении " + x + 
@@ -13,11 +13,13 @@ describe("pow", function() {
 		}
 	});
 
-	it("при возведении в отрицательную степень результат NaN", function() {
-    	assert(isNaN(pow(2, -1)));
- 	 });
+	describe("Возвращает NaN при неверных исходных данных", function() {
+		it("при возведении в отрицательную степень результат NaN", function() {
+	    	assert(isNaN(pow(2, -1)), "pow(2, -1) не NaN");
+	 	 });
 
-  	it("при возведении в дробную степень результат NaN", function() {
-    	assert(isNaN(pow(2, 1.5)));
-  	});
+	  	it("при возведении в дробную степень результат NaN", function() {
+	    	assert(isNaN(pow(2, 1.5)), "pow(2, 1.5) не NaN");
+	  	});
+	 });
 });
