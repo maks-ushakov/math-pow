@@ -5,6 +5,10 @@ function pow(x, n) {
 		return NaN;
 	}
 
+	if(x === 0 && n === 0) {
+		return NaN;
+	}
+
 	for (var i = 0; i < n; i++) {
 		result *= x;
 	}
