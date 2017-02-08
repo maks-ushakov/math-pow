@@ -1,4 +1,9 @@
 function pow(x, n) {
-   /* код функции, пока что пусто */
-   return 8; // We are lyars
+	var result = 1;
+
+	for (var i = 0; i < n; i++) {
+		result *= x;
+	}
+
+	return result;
 }
