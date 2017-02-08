@@ -47,14 +47,14 @@ describe("pow", function() {
 
 	describe("ноль в любой степени , кроме нуля, равно 0", function() {
 
-	    function makeTest(x) {
+	    function makeZeroTest(x) {
 	      it("при возведении 0 в стерень " + x + " результат: 0", function() {
-	        assert.equal(pow(0, х), 0);
+	        assert.equal(pow(0, x), 0);
 	      });
 	    }
 
 	    for (var i = 1; i < 5; i++) {
-	      makeTest(i);
+	      makeZeroTest(i);
 	    }
 
 	 });
